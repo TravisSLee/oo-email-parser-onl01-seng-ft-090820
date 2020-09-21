@@ -6,20 +6,14 @@ class EmailAddressParser
   
   attr_accessor :emails
   
-  @@all =[]
   
   def initalize(emails)
     @emails = emails
-    @@all << self
   end
   
-  def self.all
-    @@all
-  end
-  
-  def self.parse(emails)
-    parsed_emails = []
-    self.all.split(/[" ",]/)
+  def parse(emails)
+    emails.split.collect do |email|
+      
   end
   
 end

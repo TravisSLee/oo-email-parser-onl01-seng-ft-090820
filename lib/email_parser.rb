@@ -6,6 +6,16 @@ class EmailAddressParser
   
   attr_accessor :emails
   
+  @@all =[]
+  
+  def initalize(emails)
+    @@all << self
+  end
+  
+  def self.all
+    @@all
+  end
+  
   
   
 end
